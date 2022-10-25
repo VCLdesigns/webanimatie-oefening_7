@@ -10,13 +10,23 @@
 </head>
 
 <body>
-
+    <h1>Bunny Chase</h1>
+    <h2>- Try to click the bunny -</h2>
     <div id="speelveld">
-        <h1>Bunny Chase</h1>
-        <h2>- Try click the bunny -</h2>
+
         <div id="konijn"></div>
     </div>
 
 </body>
+<script>
+    var konijn = document.querySelector("#konijn");
+
+    konijn.addEventListener("mouseenter", animatie);
+    function animatie(evt) {
+        var X_as = -300 + Math.random() * (350 + 300);
+        var Y_as = -300 + Math.random() * (225 + 300);
+        konijn.style.transform = "translate(" + X_as + "px," + Y_as + "px)";
+    }
+</script>
 
 </html>
