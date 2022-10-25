@@ -58,6 +58,7 @@ body {
   background-color: var(--kleur_wit);
   color: var(--kleur_zwart);
   font-family: var(--font-brood);
+  font-size: 1.5em;
 }
 
 #speelveld {
@@ -67,7 +68,6 @@ body {
   height: 650px;
   background-image: url(../img/grass.jpg);
   background-size: contain;
-  text-align: center;
   border: 10x outset brown;
   outline: 10px inset brown;
 
