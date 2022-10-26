@@ -14,18 +14,45 @@
     <h2>- Try to click the bunny -</h2>
     <div id="speelveld">
 
-        <div id="konijn"></div>
+        <div id="konijn_1"></div>
+        <div id="konijn_2"></div>
+        <div id="konijn_3"></div>
+        <div id="konijn_4"></div>
     </div>
 
 </body>
 <script>
-    var konijn = document.querySelector("#konijn");
+    var konijn_1 = document.querySelector("#konijn_1");
+    var konijn_2 = document.querySelector("#konijn_2");
+    var konijn_3 = document.querySelector("#konijn_3");
+    var konijn_4 = document.querySelector("#konijn_4");
 
-    konijn.addEventListener("mouseenter", animatie);
-    function animatie(evt) {
-        var X_as = -300 + Math.random() * (350 + 300);
-        var Y_as = -300 + Math.random() * (225 + 300);
-        konijn.style.transform = "translate(" + X_as + "px," + Y_as + "px)";
+    konijn_1.addEventListener("mouseenter", konijn_1_weg);
+    function konijn_1_weg(evt) {
+        //Speelveld = 800 x 650, konijn = 100 x 100
+        var X_as_1 = 200 + Math.random() * (700 - 200);
+        var Y_as_1 = 200 + Math.random() * (550 - 200);
+        konijn_1.style.transform = "translate(" + X_as_1 + "px," + Y_as_1 + "px)";
+
+    }
+
+    konijn_2.addEventListener("mouseenter", konijn_2_weg);
+    function konijn_2_weg(evt) {
+        var X_as_2 = -200 + Math.random() * (-700 + 200);
+        var Y_as_2 = 200 + Math.random() * (550 - 200);
+        konijn_2.style.transform = "translate(" + X_as_2 + "px," + Y_as_2 + "px)";
+    }
+    konijn_3.addEventListener("mouseenter", konijn_3_weg);
+    function konijn_3_weg(evt) {
+        var X_as_3 = 200 + Math.random() * (700 - 200);
+        var Y_as_3 = -200 + Math.random() * (-550 + 200);
+        konijn_3.style.transform = "translate(" + X_as_3 + "px," + Y_as_3 + "px)";
+    }
+    konijn_4.addEventListener("mouseenter", konijn_4_weg);
+    function konijn_4_weg(evt) {
+        var X_as_4 = -200 + Math.random() * (-700 + 200);
+        var Y_as_4 = -200 + Math.random() * (-550 + 200);
+        konijn_4.style.transform = "translate(" + X_as_4 + "px," + Y_as_4 + "px)";
     }
 </script>
 
